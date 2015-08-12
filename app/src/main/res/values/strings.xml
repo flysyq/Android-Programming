@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">GeoQuiz</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="query_text">上海市中国最大的城市吗？</string>
+    <string name="true_button">是</string>
+    <string name="false_button">否</string>
+    <string name="true_message">正确</string>
+    <string name="false_message">错误</string>
+    <string name="next_button">下一个</string>
+    <string name="prev_button">上一个</string>
+
+    <string name="question_oceans">太平洋比大西洋要大。</string>
+    <string name="question_mideast">苏伊士运河连接了红海和印度洋。</string>
+    <string name="question_africa">尼罗河发源于埃及。</string>
+    <string name="question_asia">贝加尔湖是世界上最大最深的淡水湖。</string>
+    <string name="question_americas">亚马逊河是世界上最长的河。</string>
+</resources>
