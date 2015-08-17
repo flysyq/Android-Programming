@@ -21,4 +21,5 @@
     <string name="warning_text">你确定要这么做？</string>
     <string name="show_answer_button">显示</string>
     <string name="judgment_toast">作弊是不对的</string>
+    <string name="title_activity_cheat">CheatActivity</string>
 </resources>

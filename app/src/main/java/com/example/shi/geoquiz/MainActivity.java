@@ -1,5 +1,6 @@
 package com.example.shi.geoquiz;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +17,8 @@ public class MainActivity extends ActionBarActivity {
 
     private Button mTrueButton;
     private Button mFalseButton;
+    private Button mCheatButton;
+
     private ImageButton mNextButton;
     private ImageButton mPrevButton;
     private TextView mQuestionTextView;
@@ -62,9 +65,9 @@ public class MainActivity extends ActionBarActivity {
         mFalseButton = (Button) findViewById(R.id.false_button);
         mNextButton = (ImageButton) findViewById(R.id.next_button);
         mPrevButton = (ImageButton) findViewById(R.id.prev_button);
+        mCheatButton = (Button) findViewById(R.id.cheat_button);
 
         mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
-        updateQuestion();
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,6 +78,15 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 checkAnswer(false);
+            }
+        });
+        mCheatButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent i = new Intent(MainActivity.this, CheatActivity.class);
+                boolean answerIsTrue = mQuestionBank[mCurrentIndex].ismTrueQuestion();
+                i.putExtra(CheatActivity.EXTRA_ANSWER_IS_TRUE, answerIsTrue);
+                startActivity(i);
             }
         });
         mNextButton.setOnClickListener(new View.OnClickListener() {
@@ -99,6 +111,7 @@ public class MainActivity extends ActionBarActivity {
                 updateQuestion();
             }
         });
+        updateQuestion();
 
     }
     @Override
