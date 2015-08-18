@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class CheatActivity extends AppCompatActivity {
 
     public static final String EXTRA_ANSWER_IS_TRUE = "com.example.shiyq.geoquiz.answer_is_true";
+    public static final String EXTRA_ANSWER_SHOWN = "com.example.shiyq.geoquiz.answer_shown";
     private boolean mAnswerIsTrue;
 
     private TextView mAnswerTextView;
